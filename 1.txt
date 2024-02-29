@@ -1,0 +1,57 @@
+import numpy as np
+import pandas as pd
+df=pd.read_csv("book.csv")
+print(df)
+print('average',np.average(pen))
+print('mean',np.mean(pen))
+print('variance',np.var(pen))
+print('standard deviation',np.std(pen))
+
+b>
+from scipy.stats import binom
+n=6
+p=0.6
+r_value =list(range(n+1))
+mean,var=binom.stats(n,p)
+dist=[binom.pnf(r,n,p)for r in r_values]
+print("r\tp(r)")
+for i in range(n+1)
+ print(str(r_values[i])+"/t"+str(dist[i]))
+print('mean="+str(mean))
+print("variance="+str(var))
+
+c>
+from scipy.stats import binom
+from matplot.pyplot import plt
+n=6
+p=0.6
+r_values=list(range(n+1))
+print(r_values)
+dist=[binom.pnf(r,n,f)for r in r_values]
+plt.bar(r_values,dist)
+plt.show()
+
+d>
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+import statistics
+x_axis=np.array(-20,20,0,0.02)
+mean=statistics.mean(x_axis)
+sd=statistics.stdev(x_axis)
+plt.plot(x_axis,norm.pdf(x_axis,mean,sd))
+plt.show()
+
+e>
+from numpy import random
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.displot(random.poisson(lam=2,size=1000),kde=false)
+plt.show()
+
+f>
+fromscipy.stats import poisson
+import seaborn as sb
+data_binom=poisson.rvs(mu=4,size=1000)
+ax=size.distplot(data_binom,kde=True,color='green',hist_kws=("lineweidth":25,'alpha':1))
+ax.set(xlabel='poisson',ylabel='Frequency')

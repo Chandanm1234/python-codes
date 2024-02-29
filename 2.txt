@@ -1,0 +1,50 @@
+a>
+import scipy.stats as stats
+import pandas as pd
+data=pd.read_csv('area.csv')
+t_statistics,p_value=stats.ttest_samp(a=data,popmean=5000)
+print(t_statistics,p_value)
+
+b>
+
+
+data group1 np.array([14, 15, 15, 16, 113, 8, 14, 17, 16, 14, 19, 20, 21, 15, 15, 16, 16, 13, 14, 12])
+
+data group2 np.array(115, 17, 14, 17, 14, 8, 12, 19, 19, 14, 17, 22, 24, 16, 13, 16, 13, 18, 15, 13])
+
+stats.ttest_ind(a=data_group1, b=data_group2, equal_var=True)
+
+b>
+
+from scipy.stats import f_oneway
+
+performance l =[89, 89, 88, 78, 79]
+
+performance 2 =[93,92,94,89,89]
+
+performance 3= [89,88,89,93,90]
+
+performance 4= [81, 78, 81, 92, 82]
+
+
+
+f_oneway (performancel, performance2, performance3, performance4)
+
+c>
+from scipy, stats import chi2_contingency
+
+
+data ([207,282,241],[234,242,232])
+ stat, p, dot, expected=chi2_contingency(data)
+
+alpha 0.05
+
+print("p value is"+ str(p))
+
+if p<=alpha:
+
+  print('Dependent (reject HO)')
+
+eise:
+
+ print('Independent' (Ho holds true)')
